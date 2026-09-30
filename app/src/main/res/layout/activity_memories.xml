@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MemoriesActivity">
+
+    <TextView
+        android:id="@+id/tvMemories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Create Memory:"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:id="@+id/imgMemoryPreview"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toBottomOf="@id/tvMemories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        />
+
+    <Button
+        android:id="@+id/btnPickImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick Photo"
+        app:layout_constraintTop_toBottomOf="@id/imgMemoryPreview"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <EditText
+        android:id="@+id/etMemoryText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Write a memory:"
+        app:layout_constraintTop_toBottomOf="@id/btnPickImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Location (optional)"
+        app:layout_constraintTop_toBottomOf="@id/etMemoryText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerMood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/musicControls"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/spinnerMusic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btPlay"
+        android:text="Play"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btPause"
+        android:text="Pause"
+        />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveMemory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save Memory"
+        app:layout_constraintTop_toBottomOf="@+id/musicControls"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

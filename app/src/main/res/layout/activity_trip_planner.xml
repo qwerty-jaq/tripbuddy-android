@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".TripPlannerActivity">
+
+    <TextView
+        android:id="@+id/tvTripPlanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Trip Planner:"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTripPlanner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="16dp"
+      tools:ignore="MissingConstraints">
+
+      <EditText
+          android:id="@+id/etDestination"
+          android:hint="Destination: "
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          />
+
+      <Button
+          android:id="@+id/btnPickDate"
+          android:text="Pick Travel Dates"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          />
+
+      <TextView
+          android:id="@+id/txtSelectDate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="No date selected"
+          android:padding="8dp"
+          />
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/etNotes"
+          android:hint="Notes"
+          android:inputType="textMultiLine"
+          android:lines="4"
+          android:gravity="top"
+          android:layout_marginBottom="8dp"
+          />
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/etCustomExpense"
+          android:inputType="numberDecimal"
+          android:hint="Custom Expense "
+          android:layout_marginBottom="8dp"
+          />
+
+      <TextView
+          android:text="Select Activities: "
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkSightSeeing"
+          android:text="Sightseeing (R500)"
+          android:layout_marginBottom="4dp"
+          />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkHiking"
+          android:text="Hiking (R300)"
+          android:layout_marginBottom="4dp"
+          />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkDining"
+          android:text="Dining (R400)"
+          android:layout_marginBottom="4dp"
+          />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkMuseum"
+          android:text="Museum Tour (R200)"
+          android:layout_marginBottom="8dp"
+          />
+
+      <TextView
+          android:id="@+id/txtTotal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Total: R0"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          android:layout_marginTop="16dp"
+          />
+
+      <Button
+          android:id="@+id/btnSaveTrip"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Save Trip"
+          android:layout_marginTop="12dp"
+          />
+
+
+  </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
